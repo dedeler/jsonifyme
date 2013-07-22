@@ -6,6 +6,8 @@ gem 'rails', '4.0.0'
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'devise'
 
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails', :branch => '3.0.0'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
