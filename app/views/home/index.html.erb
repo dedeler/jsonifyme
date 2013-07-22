@@ -1,46 +1,44 @@
-    <div class="container-narrow">
+<div class="jumbotron">
+  <h1>About me for Geeks!</h1>
+  <p class="lead">If you are a json freak and want to serve your homepage as json, you're in right place</p>
+  <% if user_signed_in? %>
+    Hello, <%= current_user.email %>
+    want to log out? <%= link_to "click here", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "login", new_user_session_path, class: "btn btn-large btn-success" %> or <%= link_to "register", new_user_registration_path, class: "btn btn-large btn-success" %>
+  <% end %>
+  <div>Our last jsonifiers:</div>
+  <ul class="last_users">
+    <% @last_users.each do |user| %>
+      <%= content_tag_for :li, user do %>
+        <%= user.username %>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
 
-      <%= render 'header' %>
+<hr>
 
-      <div class="jumbotron">
-        <h1>Super awesome marketing speak!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <a class="btn btn-large btn-success" href="#">Sign up today</a>
-<% if user_signed_in? %>
-  Hello, <%= current_user.email %>
-  want to log out? <%= link_to "click here", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "login", new_user_session_path %> or <%= link_to "register", new_user_registration_path %>
-<% end %>
-      </div>
+<div class="row-fluid marketing">
+  <div class="span6">
+    <h4>Subheading</h4>
+    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-      <hr>
+    <h4>Subheading</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
-      <div class="row-fluid marketing">
-        <div class="span6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+    <h4>Subheading</h4>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+  <div class="span6">
+    <h4>Subheading</h4>
+    <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
+    <h4>Subheading</h4>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
 
-        <div class="span6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-      </div>
-
-
-      <%= render 'footer' %>
-
-    </div> <!-- /container -->
+    <h4>Subheading</h4>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+  </div>
+</div>
