@@ -1,5 +1,10 @@
 json.extract! @user, :username, :email
 if @user.person.present?
-  json.birth_date @user.person.birth_date
-  json.name @user.person.name
+  keys = @user.person.attributes.keys
+  keys.each do |key|
+    unless @user.person[key].nil?
+      next if key == "_id"
+      json.set! key, @user.person[key]
+    end
+  end
 end
