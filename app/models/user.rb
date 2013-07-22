@@ -1,5 +1,9 @@
 class User
   include Mongoid::Document
+
+  # relations
+  embeds_one :person
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -37,4 +41,13 @@ class User
 
   ## Token authenticatable
   # field :authentication_token, :type => String
+  
+  field :username, :type => String
+
+  # indexing
+  index({ username: 1 }, { unique: true, name: "username_index" })
+
+
+  validates_presence_of :username
+  validates_uniqueness_of :username
 end

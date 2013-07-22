@@ -1,6 +1,7 @@
 JsonifyMe::Application.routes.draw do
   devise_for :users
   get "home/index"
+  match '/:username' => 'home#me', via: [:get], defaults: {format: :json}
 
   root 'home#index'
 
