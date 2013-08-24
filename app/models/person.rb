@@ -4,6 +4,7 @@ class Person
   #relations 
   embedded_in :user
 
-  field :name, type: String
+  field :first_name, type: String
+  field :last_name, type: String
   field :birth_date, type: Date
 end

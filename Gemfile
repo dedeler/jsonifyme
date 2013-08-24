@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 
 gem 'mongoid', github: 'mongoid/mongoid'
 gem 'devise'
+gem 'best_in_place', github: 'bernat/best_in_place', :branch => 'rails-4'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails', :github => 'anjlab/bootstrap-rails', :branch => '3.0.0'
 

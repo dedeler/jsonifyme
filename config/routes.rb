@@ -8,6 +8,9 @@ JsonifyMe::Application.routes.draw do
   authenticated :user do
     root :to => "dashboard#show", as: :authenticated_root
   end
+  
+  resources :user
+  resources :people, only: [:update]
 
   root 'home#index'
 

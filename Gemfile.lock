@@ -8,6 +8,15 @@ GIT
       sass (>= 3.2)
 
 GIT
+  remote: git://github.com/bernat/best_in_place.git
+  revision: 366413be357d65cdf47031e928aea969f72e3659
+  branch: rails-4
+  specs:
+    best_in_place (2.0.3)
+      jquery-rails
+      rails (~> 4)
+
+GIT
   remote: git://github.com/mongoid/mongoid.git
   revision: 5d8397e24b673724f4b70ca2923a62bfe20e6e79
   specs:
@@ -139,6 +148,7 @@ PLATFORMS
 
 DEPENDENCIES
   anjlab-bootstrap-rails!
+  best_in_place!
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 1.2)

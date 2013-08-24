@@ -5,3 +5,15 @@
 
 <h2>Set Yourself</h2>
 - show my email
+<div id="username">
+  <label><%= t :username %></label>
+  <%= best_in_place @user, :username, :type => :input %>
+</div>
+<div id="firstname">
+  <label><%= t :first_name %></label>
+  <%= best_in_place @person, :first_name, :type => :input %>
+</div>
+<div id="lastname">
+  <label><%= t :last_name %></label>
+  <%= best_in_place @person, :last_name, :type => :input %>
+</div>
