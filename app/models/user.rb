@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+  before_create :set_person
 
   # relations
   embeds_one :person
@@ -44,10 +45,16 @@ class User
   
   field :username, :type => String
 
+  field :shows_email, :type => Mongoid::Boolean, :default => false
+
   # indexing
   index({ username: 1 }, { unique: true, name: "username_index" })
 
 
   validates_presence_of :username
   validates_uniqueness_of :username
+
+  def set_person
+    self.build_person
+  end
 end
