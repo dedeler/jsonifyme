@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/anjlab/bootstrap-rails.git
-  revision: 4cb88fac45fa0108393d359f18741394e5d7caa4
+  revision: addb7143365f97f938e3bdbb2ccfc52591230eda
   branch: 3.0.0
   specs:
-    anjlab-bootstrap-rails (3.0.0.0.alpha1)
+    anjlab-bootstrap-rails (3.0.0.rc2)
       railties (>= 3.0)
       sass (>= 3.2)
 
@@ -17,14 +17,13 @@ GIT
       rails (~> 4)
 
 GIT
-  remote: git://github.com/mongoid/mongoid.git
-  revision: 5d8397e24b673724f4b70ca2923a62bfe20e6e79
+  remote: git://github.com/mongoid/moped.git
+  revision: a2cda45884714808eec1d39d4fbb743d4b206a0e
   specs:
-    mongoid (4.0.0)
-      activemodel (~> 4.0.0)
-      moped (~> 1.5)
-      origin (~> 1.0)
-      tzinfo (~> 0.3.22)
+    moped (2.0.0.beta5)
+      bson (~> 2.1)
+      connection_pool (~> 1.2)
+      optionable (~> 0.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -53,43 +52,50 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    arel (4.0.0)
-    atomic (1.1.10)
-    bcrypt-ruby (3.1.1)
+    arel (4.0.1)
+    atomic (1.1.14)
+    bcrypt-ruby (3.1.2)
+    bson (2.1.0)
     builder (3.1.4)
-    coffee-rails (4.0.0)
+    coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0.beta, < 5.0)
+      railties (>= 4.0.0, < 5.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    devise (3.0.0)
+    connection_pool (1.2.0)
+    devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
-    execjs (1.4.0)
-      multi_json (~> 1.0)
+    execjs (2.0.2)
     hike (1.2.3)
-    i18n (0.6.4)
-    jbuilder (1.4.2)
+    i18n (0.6.9)
+    jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.0)
+    json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.23)
+    mime-types (1.25.1)
     minitest (4.7.5)
-    moped (1.5.0)
-    multi_json (1.7.7)
-    origin (1.1.0)
-    orm_adapter (0.4.0)
+    mongoid (4.0.0.alpha2)
+      activemodel (>= 4.0.0)
+      moped (~> 2.0.beta5)
+      origin (~> 2.1)
+      tzinfo (>= 0.3.37)
+    multi_json (1.8.4)
+    optionable (0.2.0)
+    origin (2.1.0)
+    orm_adapter (0.5.0)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -107,39 +113,39 @@ GEM
       activesupport (= 4.0.0)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.1.0)
-    rdoc (3.12.2)
+    rake (10.1.1)
+    rdoc (4.1.1)
       json (~> 1.4)
-    sass (3.2.9)
-    sass-rails (4.0.0)
-      railties (>= 4.0.0.beta, < 5.0)
+    sass (3.2.13)
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
-    sdoc (0.3.20)
-      json (>= 1.1.3)
-      rdoc (~> 3.10)
-    sprockets (2.10.0)
+    sdoc (0.4.0)
+      json (~> 1.8)
+      rdoc (~> 4.0, < 5.0)
+    sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.0.0)
+    sprockets-rails (2.0.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     thor (0.18.1)
-    thread_safe (0.1.0)
+    thread_safe (0.1.3)
       atomic
     tilt (1.4.1)
-    treetop (1.4.14)
+    treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (1.3.0)
+    turbolinks (2.2.0)
       coffee-rails
-    tzinfo (0.3.37)
-    uglifier (2.1.2)
+    tzinfo (0.3.38)
+    uglifier (2.4.0)
       execjs (>= 0.3.0)
-      multi_json (~> 1.0, >= 1.0.2)
+      json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -149,11 +155,13 @@ PLATFORMS
 DEPENDENCIES
   anjlab-bootstrap-rails!
   best_in_place!
+  bson
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 1.2)
   jquery-rails
-  mongoid!
+  mongoid (= 4.0.0.alpha2)
+  moped!
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc

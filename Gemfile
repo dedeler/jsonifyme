@@ -3,7 +3,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-gem 'mongoid', github: 'mongoid/mongoid'
+gem 'mongoid', '4.0.0.alpha2'
+gem "bson"
+gem "moped", github: "mongoid/moped"
+
 gem 'devise'
 gem 'best_in_place', github: 'bernat/best_in_place', :branch => 'rails-4'
 
