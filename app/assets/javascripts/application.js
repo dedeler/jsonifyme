@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require best_in_place
+//= require jquery.ui.datepicker
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
@@ -20,4 +21,10 @@
 $(document).ready(function() {
     /* Activating Best In Place */
     jQuery(".best_in_place").best_in_place();
+
+    $.datepicker.setDefaults({
+      changeMonth: true,
+      changeYear: true,
+      yearRange: "1930: 2010"
+    });
 });

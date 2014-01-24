@@ -3,18 +3,51 @@
   <%= link_to "just jsonify me", me_path(current_user.username) %>
 </div>
 
-<h2>Set Yourself</h2>
-<label>show my email</label>
-<%= best_in_place @user, :shows_email, :type => :checkbox, :collection => ["No, thanks", "Yes, of course!"] %>
-<div id="username">
-  <label><%= t :username %></label>
-  <%= best_in_place @user, :username, :type => :input %>
-</div>
-<div id="firstname">
-  <label><%= t :first_name %></label>
-  <%= best_in_place @person, :first_name, :type => :input %>
-</div>
-<div id="lastname">
-  <label><%= t :last_name %></label>
-  <%= best_in_place @person, :last_name, :type => :input %>
+<div class="row">
+  <h2>Set Yourself</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <label>show my email</label>
+    </div>
+    <div class="col-md-6">
+      <%= best_in_place @user, :shows_email, :type => :checkbox, :collection => ["No, thanks", "Yes, of course!"] %>
+    </div>
+  </div>
+
+  <div class="row" id="username">
+    <div class="col-md-6">
+      <label><%= t :username %></label>
+    </div>
+    <div class="col-md-6">
+      <%= best_in_place @user, :username, :type => :input %>
+    </div>
+  </div>
+
+  <div class="row" id="firstname">
+    <div class="col-md-6">
+      <label><%= t :first_name %></label>
+    </div>
+    <div class="col-md-6">
+      <%= best_in_place @person, :first_name, :type => :input %>
+    </div>
+  </div>
+
+  <div class="row" id="lastname">
+    <div class="col-md-6">
+      <label><%= t :last_name %></label>
+    </div>
+    <div class="col-md-6">
+      <%= best_in_place @person, :last_name, :type => :input %>
+    </div>
+  </div>
+
+  <div class="row" id="birthdate">
+    <div class="col-md-6">
+      <label><%= t :birth_date %></label>
+    </div>
+    <div class="col-md-6">
+      <%= best_in_place @person, :birth_date, :type => :date %>
+    </div>
+  </div>
+
 </div>
