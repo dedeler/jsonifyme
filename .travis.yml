@@ -1,3 +1,9 @@
 language: ruby
 rvm:
   - 2.1.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: 4ml/aDRBh92JUo49AzIpMKketG2uvb4Lkmmr4ct122vUGWBenyZ25cmHi8XDLff+fiqNP0YdognhFSvpxwuqQFbF0MkSDHOFotjYauRUEADpjtbckjZ5A/7IJieJaCGJK8/9sW9U74PPRMDtrLZFc5AiXKzq2nEn4CqBRCuBFTo=
+  app:
+    master: jsonifyme
